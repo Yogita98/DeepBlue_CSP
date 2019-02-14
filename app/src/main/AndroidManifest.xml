@@ -28,8 +28,13 @@
         <activity android:name=".sideview2" />
         <activity android:name=".serverupload" />
         <activity android:name=".choice" />
+        <activity android:name=".edittopimage" />
+        <activity android:name=".editsideimage" />
+        <activity android:name=".dimensions" />
+        <activity android:name=".issue" />
         <activity android:name=".gallerypage" />
-        <activity android:name=".issue"></activity>
+
+
     </application>
 
 </manifest>

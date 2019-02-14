@@ -918,7 +918,7 @@ public class Camera2BasicFragment2 extends Fragment
                     showToast("Saved: " + mFile);
                     Log.d(TAG, mFile.toString());
                     unlockFocus();
-                    Intent intent = new Intent(getActivity(), serverupload.class);
+                    Intent intent = new Intent(getActivity(), edittopimage.class);
                     startActivity(intent);
                     }
 
