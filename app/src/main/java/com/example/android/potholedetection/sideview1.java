@@ -21,7 +21,7 @@ public class sideview1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sideview1);
         btnCapture = findViewById(R.id.btnTakePicture1);
-        imgCapture = findViewById(R.id.capturedImage);
+        //imgCapture = findViewById(R.id.capturedImage);
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

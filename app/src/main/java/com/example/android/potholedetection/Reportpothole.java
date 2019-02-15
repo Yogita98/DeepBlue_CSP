@@ -22,7 +22,7 @@ public class Reportpothole extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportpothole);
         btnCapture =(Button)findViewById(R.id.btnTakePicture);
-        imgCapture = (ImageView) findViewById(R.id.capturedImage);
+        //imgCapture = (ImageView) findViewById(R.id.capturedImage);
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
