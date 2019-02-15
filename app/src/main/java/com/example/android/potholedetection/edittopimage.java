@@ -35,14 +35,32 @@ public class edittopimage extends AppCompatActivity implements PaintViewInterfac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edittopimage);
         Button b1 = (Button) findViewById(R.id.btn_next);
+        final float arrayXf[];
+        arrayXf = new float[10];
+        final float arrayYf[];
+        arrayYf = new float[10];
 
 
 
         b1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent in = new Intent(edittopimage.this, editsideimage.class);
-                in.putExtra("arraytX",arrayX);
-                in.putExtra("arraytY",arrayY);
+
+                int i = 0, j = 0;
+                for (Float f : arrayX) {
+                    arrayXf[i++] = (f != null ? f : Float.NaN);
+                }
+                for (Float f : arrayY) {
+                    arrayYf[j++] = (f != null ? f : Float.NaN);
+                }
+//                Log.d("Array topX is: ",arrayX.toString());
+//                Log.d("Array topY is: ",arrayY.toString());
+
+                Bundle bundle = new Bundle();
+                bundle.putFloatArray("arraytX", arrayXf);
+                bundle.putFloatArray("arraytY", arrayYf);
+                in.putExtras(bundle);
+
                 startActivity(in);
                 in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 //startActivity(new Intent(edittopimage.this,editsideimage.class));
