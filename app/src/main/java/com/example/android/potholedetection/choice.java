@@ -25,7 +25,7 @@ public class choice extends AppCompatActivity {
 
         b2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(choice.this,gallerypage.class));
+                startActivity(new Intent(choice.this,disclaimer.class));
             }
         });
 

@@ -11,6 +11,8 @@
         android:layout_height="wrap_content"
         android:id = "@+id/btn_pick"
         android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:layout_margin="5dp"
         android:text="Pick Image"/>
 
     <Button
@@ -19,6 +21,8 @@
         android:id = "@+id/btn_next"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:background="@color/colorPrimary"
+        android:layout_margin="5dp"
         android:text="Next Image"/>
 
     <TextView

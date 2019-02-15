@@ -17,7 +17,7 @@ public class disclaimer extends AppCompatActivity {
 
 b1.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
-        Intent in = new Intent(disclaimer.this, edittopimage.class);
+        Intent in = new Intent(disclaimer.this, shoe_size.class);
         startActivity(in);
 
 
