@@ -27,6 +27,7 @@ public class editsideimage extends AppCompatActivity implements PaintViewInterfa
     public ArrayList<Float> arrayY1 = new ArrayList<>(10);
     float arrayt1X[];
     float arrayt1Y[];
+    int shoesize;
 
 //    public ArrayList<Float> arrayt1X = new ArrayList<>(10);
 //    public ArrayList<Float> arrayt1Y = new ArrayList<>(10);
@@ -44,6 +45,7 @@ public class editsideimage extends AppCompatActivity implements PaintViewInterfa
 
         arrayt1X = bundle.getFloatArray("arraytX");
         arrayt1Y = bundle.getFloatArray("arraytY");
+        shoesize = bundle.getInt("Shoe_size");
         Log.d("Array topX[0] in side ", String.valueOf(arrayt1X[0]));
         Log.d("Array topY[0] in side ", String.valueOf(arrayt1Y[0]));
 
@@ -75,6 +77,7 @@ public class editsideimage extends AppCompatActivity implements PaintViewInterfa
                 bundle.putFloatArray("arraytY", arrayt1Y);
                 bundle.putFloatArray("arraysX", arrayXf);
                 bundle.putFloatArray("arraysY", arrayYf);
+                bundle.putInt("Shoe_size",shoesize);
                 in.putExtras(bundle);
                 startActivity(in);
                 in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
