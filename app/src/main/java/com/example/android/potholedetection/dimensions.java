@@ -153,10 +153,10 @@ public class dimensions extends AppCompatActivity {
         //Severity = 1 // Low level pothole
         //Severity = 2 // Medium level pothole
         //Severity = 3 // High level pothole
-        if (depthincm >= 5.0 || depthincm <= 15.0) {
+        if (depthincm >= 5.0 && depthincm <= 15.0) {
             severity = 2;
 
-        } else if (depthincm >= 15.0 || depthincm <= 25.0) {
+        } else if (depthincm >= 15.0 && depthincm <= 25.0) {
             severity = 3;
         } else {
             severity = 1;
