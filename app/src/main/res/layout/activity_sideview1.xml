@@ -5,22 +5,25 @@
     android:id="@+id/relative_layout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
     tools:context="com.example.android.potholedetection.sideview1">
 
     <Button
         android:id="@+id/btnTakePicture1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:background="@color/colorPrimary"
         android:text="     Take sideview image     "
         android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take side view image at an angle with minimum distance from the pothole. The image should cover the entire pothole."
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"/>
 
-    <ImageView
-        android:id="@+id/capturedImage1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/btnTakePicture1" />
 </RelativeLayout>
