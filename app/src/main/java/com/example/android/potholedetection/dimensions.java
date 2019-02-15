@@ -17,6 +17,8 @@ public class dimensions extends AppCompatActivity {
     float[] arraysideY;
     float refcm, refpxl, width1pxl, width2pxl, depth2pxl, widthincm, depthincm;
     int shoesize;
+    int severity = 0;
+
 
     // Reference object length in cm = refcm
     // Reference object length in pixel = refpxl
@@ -37,13 +39,6 @@ public class dimensions extends AppCompatActivity {
         arraysideY = new float[10];
 
 
-        Button b1 = (Button) findViewById(R.id.yes);
-        b1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startActivity(new Intent(dimensions.this, issue.class));
-
-            }
-        });
         Button b2 = (Button) findViewById(R.id.no);
         b2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -88,7 +83,7 @@ public class dimensions extends AppCompatActivity {
             case 44: refcm = (float)28.0;
             case 45: refcm = (float)28.7;
             case 46: refcm = (float)29.3;
-            default: refcm = (float)6.4;
+            case 0: refcm = (float)6.4;
 
 
         }
@@ -166,6 +161,22 @@ public class dimensions extends AppCompatActivity {
         } else {
             severity = 1;
         }
+        Button b1 = (Button) findViewById(R.id.yes);
+        final int finalSeverity = severity;
+        b1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent in = new Intent(dimensions.this, issue.class);
+                Bundle bundle = new Bundle();
+                bundle.putFloat("Width",widthincm);
+                bundle.putFloat("Depth",depthincm);
+                bundle.putInt("Shoesize",shoesize);
+                bundle.putInt("Severity", finalSeverity);
+                in.putExtras(bundle);
+                startActivity(in);
+                //startActivity(new Intent(dimensions.this, issue.class));
+            }
+        });
+
 
     }
 

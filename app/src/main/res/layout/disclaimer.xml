@@ -8,26 +8,36 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="25dp"
         android:text="The user is strictly expected to follow the disclaimer as given below!!" />
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter your Euro shoe size"/>
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textView2"
+        android:textSize="20dp"
+        android:text="Enter your shoe size in Euro for reference object"/>
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TopView:"/>
+        android:layout_margin="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/textView3"
+        android:text="For TopView Image:"
+        android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
+        android:layout_margin="5dp"
+        android:layout_below="@id/textView5"
+        android:textSize="17dp"
         android:text="1.Mark the reference object and bigger width of the pothole in the topview image."/>
 
 
@@ -35,9 +45,9 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
+        android:layout_margin="5dp"
+        android:layout_below="@id/textView6"
+        android:textSize="17dp"
         android:text="2.Mark the extreme ends of the reference object first and then the width"/>
 
 
@@ -45,19 +55,20 @@
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
+        android:layout_margin="5dp"
         android:layout_marginLeft="10dp"
-        android:text="SideView:"/>
+        android:layout_below="@id/textView7"
+        android:text="For SideView Image:"
+        android:textSize="20dp"/>
 
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
+        android:layout_margin="5dp"
+        android:layout_below="@id/textView8"
+        android:textSize="17dp"
         android:text="1.Mark the width and depth of the pothole."/>
 
 
@@ -65,30 +76,21 @@
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:text="2.Mark the extreme ends of the reference object first and then the width."/>
+        android:layout_margin="5dp"
+        android:layout_below="@id/textView9"
+        android:textSize="17dp"
+        android:text="2.Mark the extreme ends of the width first and then the depth."/>
 
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:text="Please Note: You can mark only 4 points." />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:text="1.Mark the width and depth of the pothole."/>
-
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textView10"
+        android:textSize="20dp"
+        android:text="Please Note:Mark only 4 points" />
 
 
     <Button
@@ -98,6 +100,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
+        android:layout_margin="10dp"
         android:text="OK" />
 
 

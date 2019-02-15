@@ -34,6 +34,8 @@
         <activity android:name=".issue" />
         <activity android:name=".gallerypage" />
         <activity android:name=".shoe_size" />
+        <activity android:name=".showdimensions" />
+
     </application>
 
 </manifest>
