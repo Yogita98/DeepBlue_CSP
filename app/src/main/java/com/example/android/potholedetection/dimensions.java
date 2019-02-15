@@ -7,16 +7,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.ArrayList;
-
 
 public class dimensions extends AppCompatActivity {
-    ArrayList<String> arraytopX1 = new ArrayList<>(10);
-    ArrayList<String> arraytopY1 = new ArrayList<>(10);
-    ArrayList<String> arraysideX1 = new ArrayList<>(10);
-    ArrayList<String> arraysideY1 = new ArrayList<>(10);
+    public int Xdirtop;
+    public int Xdirside;
+    float[] arraytopX;
+    float[] arraytopY;
+    float[] arraysideX;
+    float[] arraysideY;
+    float refcm, refpxl, width1pxl, width2pxl, depth2pxl, widthincm, depthincm;
 
-    float refcm, refpxl, width1pxl, width2pxl,depth2pxl;
     // Reference object length in cm = refcm
     // Reference object length in pixel = refpxl
     // Pothole width in pixel from topview image = width1pxl
@@ -28,39 +28,125 @@ public class dimensions extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dimensions);
+        setContentView(R.layout.activity_serverupload);
+        refcm = (float) 6.4;  //Length of toothpick
+        arraytopX = new float[10];
+        arraytopY = new float[10];
+        arraysideX = new float[10];
+        arraysideY = new float[10];
 
-        Button b1 = (Button) findViewById(R.id.btn_toUpload);
 
-
-
+        Button b1 = (Button) findViewById(R.id.yes);
         b1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startActivity(new Intent(dimensions.this,serverupload.class));
+                startActivity(new Intent(dimensions.this, issue.class));
+
+            }
+        });
+        Button b2 = (Button) findViewById(R.id.no);
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(dimensions.this, MainActivity.class));
 
             }
         });
 
+
         Bundle bundle = getIntent().getExtras();
-        arraytopX1 = (ArrayList<String>) bundle.getStringArrayList("arraytX");
-        arraytopY1 = (ArrayList<String>) bundle.getStringArrayList("arraytY");
-        arraysideX1 = (ArrayList<String>) bundle.getStringArrayList("arraysX");
-        arraysideY1 = (ArrayList<String>) bundle.getStringArrayList("arraysY");
+        arraytopX = bundle.getFloatArray("arraytX");
+        arraytopY = bundle.getFloatArray("arraytY");
+        arraysideX = bundle.getFloatArray("arraysX");
+        arraysideY = bundle.getFloatArray("arraysY");
 
-        Log.d("Array in topview X is:",arraytopX1.toString());
-        Log.d("Array in topview Y is:",arraytopY1.toString());
-        Log.d("Array in sideview X is:",arraysideX1.toString());
-        Log.d("Array in sideview Y is:",arraysideY1.toString());
+//        Log.d("arraytopX[0]is",String.valueOf(arraytopX[0]));
+//        Log.d("arraytopX[1]is",String.valueOf(arraytopX[1]));
+//        Log.d("arraysideX[0]is",String.valueOf(arraysideX[0]));
+//        Log.d("arraysideX[1]is",String.valueOf(arraysideX[1]));
+//
+//        Log.d("arraytopY[0]is",String.valueOf(arraytopY[0]));
+//        Log.d("arraytopY[1]is",String.valueOf(arraytopY[1]));
+//        Log.d("arraysideY[0]is",String.valueOf(arraysideY[0]));
+//        Log.d("arraysideY[1]is",String.valueOf(arraysideY[1]));
 
-        double ref1,ref2,ref3,ref4;
-        double depth1, depth2, depth3, depth4;
+//        Log.d("Array in topview X is:",arraytopX.toString());
+//        Log.d("Array in topview Y is:",arraytopY.toString());
+//        Log.d("Array in sideview X is:",arraysideX.toString());
+//        Log.d("Array in sideview Y is:",arraysideY.toString());
 
-//        ref1 = (double)Double.parseDouble(arraytopX1.get(0).toString());
-//        ref2 = (double)Double.parseDouble(arraytopX1.get(1));
-//        ref3 = (double)Double.parseDouble(arraytopY1.get(0));
-//        ref4 = (double)Double.parseDouble(arraytopY1.get(1));
+        int severity = 0;
+
+        float reft1, reft2, refs1, refs2;
+        reft1 = arraytopX[0];
+        reft2 = arraytopX[1];
+        refs1 = arraysideX[0];
+        refs2 = arraysideX[1];
 
 
+        //Xdirtop = 0 means vertically aligned and we take Y values
+        //Xdirside = 0 means vertically aligned and we take Y values
+
+        if (reft2 - reft1 >= 50 || reft1 - reft2 >= 50) {
+            Xdirtop = 1;
+        }
+
+        if (refs2 - refs1 >= 50 || refs1 - refs2 >= 50) {
+            Xdirside = 1;
+        }
+//        Log.d("Xdirtop is:",String.valueOf(Xdirtop));
+//        Log.d("Xdirside is:",String.valueOf(Xdirside));
+
+        if (Xdirtop == 1) {
+            //Take values from X array
+            refpxl = Math.abs(arraytopX[1] - arraytopX[0]);
+            Log.d("Reference pixel:", String.valueOf(refpxl));
+            width1pxl = Math.abs(arraytopX[3] - arraytopX[2]);
+            Log.d("Width1 pixel:", String.valueOf(width1pxl));
+        }
+        if (Xdirtop == 0) {
+            //Take values from Y array
+            refpxl = Math.abs(arraytopY[1] - arraytopY[0]);
+            Log.d("Reference pixel:", String.valueOf(refpxl));
+            width1pxl = arraytopY[3] - arraytopY[2];
+            Log.d("Width1 pixel:", String.valueOf(width1pxl));
+        }
+
+        if (Xdirside == 1) {
+            //Take values from X array
+            width2pxl = arraysideX[1] - arraysideX[0];
+            Log.d("Width2 pixel:", String.valueOf(width2pxl));
+            depth2pxl = arraysideX[3] - arraysideX[2];
+            Log.d("depth2 pixel:", String.valueOf(depth2pxl));
+        }
+        if (Xdirside == 0) {
+            //Take values from Y array
+            width2pxl = arraysideY[1] - arraysideY[0];
+            Log.d("Width2 pixel:", String.valueOf(width2pxl));
+            depth2pxl = arraysideY[3] - arraysideY[2];
+            Log.d("Depth2 pixel:", String.valueOf(depth2pxl));
+
+        }
+
+        //Find Width in cm
+        widthincm = detectWidth(refcm, refpxl, width1pxl);
+        Log.d("Width in cm: ", String.valueOf(widthincm));
+
+
+        //Find Depth in cm
+        depthincm = detectDepth(refcm, refpxl, width1pxl, width2pxl, depth2pxl);
+        Log.d("Depth in cm: ", String.valueOf(depthincm));
+
+        //Severity = 0 // Not a pothole
+        //Severity = 1 // Low level pothole
+        //Severity = 2 // Medium level pothole
+        //Severity = 3 // High level pothole
+        if (depthincm >= 5.0 || depthincm <= 15.0) {
+            severity = 2;
+
+        } else if (depthincm >= 15.0 || depthincm <= 25.0) {
+            severity = 3;
+        } else {
+            severity = 1;
+        }
 
     }
 
@@ -76,16 +162,10 @@ public class dimensions extends AppCompatActivity {
         float depth1pxl;
         float depthcm;
         depth1pxl = (bwidth1pxl*bdepth2pxl)/bwidth2pxl;
+        Log.d("Depth1 pixel:", String.valueOf(depth1pxl));
+
         depthcm = (depth1pxl*brefcm)/brefpxl;
         return depthcm;
     }
-
-    //Find Width in cm
-    float widthincm = detectWidth(refcm,refpxl,width1pxl);
-
-
-    //Find Depth in cm
-    float depthincm = detectDepth(refcm, refpxl, width1pxl, width2pxl, depth2pxl);
-
 
 }

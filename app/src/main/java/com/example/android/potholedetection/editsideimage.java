@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -22,10 +23,13 @@ public class editsideimage extends AppCompatActivity implements PaintViewInterfa
     int mWidth;
     int mHeight;
     Menu menu;
-    public ArrayList<Float> arrayX = new ArrayList<>(10);
-    public ArrayList<Float> arrayY = new ArrayList<>(10);
-    public ArrayList<String> arrayt1X = new ArrayList<>(10);
-    public ArrayList<String> arrayt1Y = new ArrayList<>(10);
+    public ArrayList<Float> arrayX1 = new ArrayList<>(10);
+    public ArrayList<Float> arrayY1 = new ArrayList<>(10);
+    float arrayt1X[];
+    float arrayt1Y[];
+
+//    public ArrayList<Float> arrayt1X = new ArrayList<>(10);
+//    public ArrayList<Float> arrayt1Y = new ArrayList<>(10);
 
 
     @Override
@@ -33,20 +37,45 @@ public class editsideimage extends AppCompatActivity implements PaintViewInterfa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editsideimage);
         Button b1 = (Button) findViewById(R.id.btn_next);
+        // arrayt1X = new float[10];
+        //arrayt1Y = new float[10];
+
         Bundle bundle = getIntent().getExtras();
-        arrayt1X = (ArrayList<String>) bundle.getStringArrayList("arraytX");
-        arrayt1Y = (ArrayList<String>) bundle.getStringArrayList("arraytY");
-        //Log.d("Array in side X is: ",arrayt1X.toString());
-        //Log.d("Array in side Y is: ",arrayt1Y.toString());
+
+        arrayt1X = bundle.getFloatArray("arraytX");
+        arrayt1Y = bundle.getFloatArray("arraytY");
+        Log.d("Array topX[0] in side ", String.valueOf(arrayt1X[0]));
+        Log.d("Array topY[0] in side ", String.valueOf(arrayt1Y[0]));
+
+        final float arrayXf[];
+        arrayXf = new float[10];
+        final float arrayYf[];
+        arrayYf = new float[10];
 
 
         b1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+
+
+                int i = 0, j = 0;
+                for (Float f : arrayX1) {
+                    arrayXf[i++] = (f != null ? f : Float.NaN);
+                }
+                for (Float f : arrayY1) {
+                    arrayYf[j++] = (f != null ? f : Float.NaN);
+                }
+//                Log.d("Array sideX is: ",arrayX1.toString());
+//                Log.d("Array sideY is: ",arrayY1.toString());
+//                Log.d("Array topX[0] is: ",String.valueOf(arrayXf[0]));
+//                Log.d("Array topY[0] is: ",String.valueOf(arrayYf[0]));
+
                 Intent in = new Intent(editsideimage.this, dimensions.class);
-                in.putExtra("arraytX",arrayt1X);
-                in.putExtra("arraytY",arrayt1Y);
-                in.putExtra("arraysX",arrayX);
-                in.putExtra("arraysY",arrayY);
+                Bundle bundle = new Bundle();
+                bundle.putFloatArray("arraytX", arrayt1X);
+                bundle.putFloatArray("arraytY", arrayt1Y);
+                bundle.putFloatArray("arraysX", arrayXf);
+                bundle.putFloatArray("arraysY", arrayYf);
+                in.putExtras(bundle);
                 startActivity(in);
                 in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 editsideimage.this.finish();
@@ -81,8 +110,8 @@ public class editsideimage extends AppCompatActivity implements PaintViewInterfa
     @Override
     public void onActionFinished(float movedX, float movedY) {
         /*Print it wherever you want here */
-        arrayX.add(movedX);
-        arrayY.add(movedY);
+        arrayX1.add(movedX);
+        arrayY1.add(movedY);
 
         //Log.d("ArrayX Side is:",arrayX.toString());
         //Log.d("ArrayY Side is:",arrayY.toString());
