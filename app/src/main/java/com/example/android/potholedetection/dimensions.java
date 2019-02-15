@@ -16,6 +16,7 @@ public class dimensions extends AppCompatActivity {
     float[] arraysideX;
     float[] arraysideY;
     float refcm, refpxl, width1pxl, width2pxl, depth2pxl, widthincm, depthincm;
+    int shoesize;
 
     // Reference object length in cm = refcm
     // Reference object length in pixel = refpxl
@@ -29,7 +30,7 @@ public class dimensions extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_serverupload);
-        refcm = (float) 6.4;  //Length of toothpick
+        //refcm = (float) 6.4;  //Length of toothpick
         arraytopX = new float[10];
         arraytopY = new float[10];
         arraysideX = new float[10];
@@ -57,6 +58,7 @@ public class dimensions extends AppCompatActivity {
         arraytopY = bundle.getFloatArray("arraytY");
         arraysideX = bundle.getFloatArray("arraysX");
         arraysideY = bundle.getFloatArray("arraysY");
+        shoesize = bundle.getInt("Shoe_size");
 
 //        Log.d("arraytopX[0]is",String.valueOf(arraytopX[0]));
 //        Log.d("arraytopX[1]is",String.valueOf(arraytopX[1]));
@@ -74,6 +76,23 @@ public class dimensions extends AppCompatActivity {
 //        Log.d("Array in sideview Y is:",arraysideY.toString());
 
         int severity = 0;
+
+        switch(shoesize){
+            case 37: refcm = (float)23.3;
+            case 38: refcm = (float)24.0;
+            case 39: refcm = (float)24.7;
+            case 40: refcm = (float)25.3;
+            case 41: refcm = (float)26.0;
+            case 42: refcm = (float)26.7;
+            case 43: refcm = (float)27.3;
+            case 44: refcm = (float)28.0;
+            case 45: refcm = (float)28.7;
+            case 46: refcm = (float)29.3;
+            default: refcm = (float)6.4;
+
+
+        }
+
 
         float reft1, reft2, refs1, refs2;
         reft1 = arraytopX[0];

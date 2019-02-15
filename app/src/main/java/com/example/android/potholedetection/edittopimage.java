@@ -39,6 +39,10 @@ public class edittopimage extends AppCompatActivity implements PaintViewInterfac
         arrayXf = new float[10];
         final float arrayYf[];
         arrayYf = new float[10];
+        final int shoesize;
+        Bundle bundle = getIntent().getExtras();
+        shoesize = bundle.getInt("Shoe_size");
+
 
 
 
@@ -59,6 +63,7 @@ public class edittopimage extends AppCompatActivity implements PaintViewInterfac
                 Bundle bundle = new Bundle();
                 bundle.putFloatArray("arraytX", arrayXf);
                 bundle.putFloatArray("arraytY", arrayYf);
+                bundle.putInt("Shoe_size",shoesize);
                 in.putExtras(bundle);
 
                 startActivity(in);
