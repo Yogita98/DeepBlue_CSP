@@ -23,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="82dp"
         android:text="Images uploaded to server successfully "
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#D81B60"
         android:textSize="20dp"
         android:textStyle="bold" />
 

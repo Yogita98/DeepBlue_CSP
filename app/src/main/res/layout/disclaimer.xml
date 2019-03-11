@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:textSize="25dp"
+        android:textColor="@color/colorPrimary"
         android:text="The user is strictly expected to follow the disclaimer as given below!!" />
     <TextView
         android:id="@+id/textView3"
@@ -28,6 +29,7 @@
         android:layout_margin="5dp"
         android:layout_marginLeft="10dp"
         android:layout_below="@id/textView3"
+        android:textColor="#D81B60"
         android:text="For TopView Image:"
         android:textSize="20dp"/>
 
@@ -59,6 +61,7 @@
         android:layout_marginLeft="10dp"
         android:layout_below="@id/textView7"
         android:text="For SideView Image:"
+        android:textColor="#D81B60"
         android:textSize="20dp"/>
 
 
@@ -90,6 +93,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/textView10"
         android:textSize="20dp"
+        android:textColor="#D81B60"
         android:text="Please Note:Mark only 4 points" />
 
 

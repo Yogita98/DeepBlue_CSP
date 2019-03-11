@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DeepBlue_CSP.iml" filepath="$PROJECT_DIR$/DeepBlue_CSP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pothole-detection-and-depth-estimation.iml" filepath="$PROJECT_DIR$/pothole-detection-and-depth-estimation.iml" />
     </modules>
   </component>
 </project>

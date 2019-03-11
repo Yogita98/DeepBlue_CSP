@@ -11,7 +11,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="112dp"
         android:text="Enter Euro Shoe Size :"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="#D81B60"
         android:textSize="25sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

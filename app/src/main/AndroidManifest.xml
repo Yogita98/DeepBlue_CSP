@@ -12,30 +12,48 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/app_name1"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main2Activity"
+            android:theme="@style/AppTheme.Dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Signup"
+            android:label="@string/app_name1"/>
+        <activity android:name=".LoginSignup"
+            android:label="@string/app_name1"/>
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name1">
+        </activity>
         <activity android:name=".Reportpothole" />
-        <activity android:name=".sideview1" />
-        <activity android:name=".disclaimer"/>
-        <activity android:name=".serverupload" />
-        <activity android:name=".choice" />
-        <activity android:name=".edittopimage" />
-        <activity android:name=".editsideimage" />
-        <activity android:name=".dimensions" />
-        <activity android:name=".issue" />
-        <activity android:name=".gallerypage" />
-        <activity android:name=".shoe_size" />
-        <activity android:name=".showdimensions" />
-
+        <activity android:name=".sideview1"
+            android:label="@string/app_name1"/>
+        <activity android:name=".disclaimer"
+            android:label="@string/app_name1"/>
+        <activity android:name=".serverupload"
+            android:label="@string/app_name1"/>
+        <activity android:name=".choice"
+            android:label="@string/app_name1"/>
+        <activity android:name=".edittopimage"
+            android:label="@string/app_name1"/>
+        <activity android:name=".editsideimage"
+            android:label="@string/app_name1"/>
+        <activity android:name=".dimensions"
+            android:label="@string/app_name1"/>
+        <activity android:name=".issue"
+            android:label="@string/app_name1"/>
+        <activity android:name=".gallerypage"
+            android:label="@string/app_name1"/>
+        <activity android:name=".shoe_size"
+            android:label="@string/app_name1"/>
+        <activity android:name=".showdimensions"
+            android:label="@string/app_name1"/>
     </application>
 
 </manifest>
