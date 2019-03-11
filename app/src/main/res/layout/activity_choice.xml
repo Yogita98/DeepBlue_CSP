@@ -30,6 +30,7 @@
         android:text="   Upload pictures"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:textColor="#D81B60"
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="122dp" />
 

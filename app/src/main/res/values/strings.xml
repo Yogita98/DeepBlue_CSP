@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Pothole Detection</string>
+    <string name="app_name1">SafeRoads</string>
+
     <string name="picture">Picture</string>
     <string name="description_info">Info</string>
     <string name="request_permission">This sample needs camera permission.</string>
@@ -14,4 +16,5 @@
 
         ]]>
     </string>
+
 </resources>

@@ -8,6 +8,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/show_width"
         android:layout_margin="10dp"
+        android:textColor="#D81B60"
+
         android:textSize="25dp"
         />
 
@@ -17,6 +19,8 @@
         android:id="@+id/show_depth"
         android:layout_margin="10dp"
         android:layout_below="@id/show_width"
+        android:textColor="#D81B60"
+
         android:textSize="25dp"
         />
 
@@ -26,6 +30,8 @@
         android:id="@+id/show_severity"
         android:layout_margin="10dp"
         android:layout_below="@id/show_depth"
+        android:textColor="#D81B60"
+
         android:textSize="25dp"
         />
 

@@ -28,7 +28,7 @@
         android:ems="10"
         android:inputType="textMultiLine"
         android:text="Do you want to upload the pictures to the server and raise a new query?"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#D81B60"
         android:textSize="25dp"
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="122dp" />
