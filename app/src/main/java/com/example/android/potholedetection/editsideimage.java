@@ -71,7 +71,7 @@ public class editsideimage extends AppCompatActivity implements PaintViewInterfa
 //                Log.d("Array topX[0] is: ",String.valueOf(arrayXf[0]));
 //                Log.d("Array topY[0] is: ",String.valueOf(arrayYf[0]));
 
-                Intent in = new Intent(editsideimage.this, dimensions.class);
+                Intent in = new Intent(editsideimage.this, CurrentLocation.class);
                 Bundle bundle = new Bundle();
                 bundle.putFloatArray("arraytX", arrayt1X);
                 bundle.putFloatArray("arraytY", arrayt1Y);
