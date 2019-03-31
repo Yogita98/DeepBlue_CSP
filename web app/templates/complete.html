@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='complete_.css') }}">
+
+    <meta charset="UTF-8">
+    <title>Response</title>
+</head>
+<body>
+<h2>json Response</h2>
+<ul>
+{% for x in pred %}
+    <li>{{ x }}</li>
+{% endfor %}
+</ul>
+<!-- <h3>
+	{% if x == null %}
+	<h4>pothole not detected</h4>
+	{% else %}
+	<h4>Pothole detected</h4>
+	{% endif %} -->
+<img src="static/plot_.jpg">
+</body>
+</html>
