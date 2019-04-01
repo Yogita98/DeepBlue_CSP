@@ -1,4 +1,5 @@
 Pothole Detection and Analysis:
+
 This project was presented in Mastek and Majesco's DeepBlue Season-4 Semi-Final round as well as for final TE project.
 The project has 2 modules which is an android application and a web application.
 The android application lets the user report the potholes in and around their areas and gives the parameters and severity of the pothole in turn.
