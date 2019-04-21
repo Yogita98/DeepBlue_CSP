@@ -2,6 +2,7 @@ package com.example.android.potholedetection;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -15,9 +16,18 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.BindView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+
+
 public class LoginSignup extends AppCompatActivity {
+    private FirebaseAuth auth;
     private static final String TAG = "LoginSignup";
     private static final int REQUEST_SIGNUP = 0;
+    String email,password;
 
     @BindView(R.id.input_email)
     EditText _emailText;
@@ -35,6 +45,9 @@ public class LoginSignup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_signup);
         ButterKnife.bind(this);
+        //Get Firebase auth instance
+        auth = FirebaseAuth.getInstance();
+
 
 //        findViewById(R.id.btn_login).setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -45,11 +58,38 @@ public class LoginSignup extends AppCompatActivity {
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                login();
-            }
-        });
+                                            @Override
+                                            public void onClick(View v) {
+                                                email = _emailText.getText().toString();
+                                                password = _passwordText.getText().toString();
+
+                                                //authenticate user
+                                                auth.signInWithEmailAndPassword(email, password)
+                                                        .addOnCompleteListener(LoginSignup.this, new OnCompleteListener<AuthResult>() {
+                                                            @Override
+                                                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                                                // If sign in fails, display a message to the user. If sign in succeeds
+                                                                // the auth state listener will be notified and logic to handle the
+                                                                // signed in user can be handled in the listener.
+                                                                //progressBar.setVisibility(View.GONE);
+                                                                if (!task.isSuccessful()) {
+                                                                    // there was an error
+                                                                    if (password.length() < 6) {
+                                                                        _passwordText.setError("Incorrect Password!");
+                                                                    } else {
+                                                                        Toast.makeText(LoginSignup.this, "Login Failed!!", Toast.LENGTH_LONG).show();
+                                                                    }
+                                                                } else {
+                                                                    Intent intent = new Intent(LoginSignup.this, MainActivity.class);
+                                                                    startActivity(intent);
+                                                                    finish();
+                                                                }
+
+                                                            }
+                                                        });
+                                                login();
+                                            }
+                                        });
 
         _signupLink.setOnClickListener(new View.OnClickListener() {
 
@@ -65,10 +105,10 @@ public class LoginSignup extends AppCompatActivity {
     public void login() {
         Log.d(TAG, "Login");
 
-        if (!validate()) {
-            onLoginFailed();
-            return;
-        }
+//        if (!validate()) {
+//            onLoginFailed();
+//            return;
+//        }
 
         _loginButton.setEnabled(false);
 
@@ -78,8 +118,8 @@ public class LoginSignup extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        final String email = _emailText.getText().toString();
-        final String password = _passwordText.getText().toString();
+//        final String email = _emailText.getText().toString();
+//        final String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
 
@@ -91,10 +131,10 @@ public class LoginSignup extends AppCompatActivity {
 //                        if (email == "tanyamohanani@gmail.com" && password == "tanya@123"){
 //                            startActivity(new Intent(LoginSignup.this, MainActivity.class));
 //                        }
-                        // onLoginFailed();
-                        progressDialog.dismiss();
+                        //onLoginFailed();
+                        //progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 5000);
     }
 
 
@@ -118,7 +158,7 @@ public class LoginSignup extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
-        startActivity(new Intent(LoginSignup.this, MainActivity.class));
+        //startActivity(new Intent(LoginSignup.this, MainActivity.class));
         finish();
     }
 

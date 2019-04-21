@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Pothole Detection</string>
     <string name="app_name1">SafeRoads</string>
+    <string name="quotedesc">Locate the Pothole</string>
 
     <string name="picture">Picture</string>
     <string name="description_info">Info</string>

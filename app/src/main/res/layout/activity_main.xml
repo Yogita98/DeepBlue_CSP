@@ -10,21 +10,11 @@
         android:id="@+id/report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="167dp"
+        android:layout_centerVertical="true"
         android:background="@color/colorPrimary"
         android:text="     Report a Pothole    "
         />
 
-    <Button
-        android:id="@+id/checkstatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/report"
-        android:layout_alignRight="@+id/report"
-        android:layout_below="@+id/report"
-        android:layout_marginTop="100dp"
-        android:background="@color/colorPrimary"
-        android:text="Check Status of Issue" />
+
 </RelativeLayout>

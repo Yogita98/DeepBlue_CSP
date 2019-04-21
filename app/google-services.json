@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "253503549122",
+    "firebase_url": "https://saferoads-1552754377946.firebaseio.com",
+    "project_id": "saferoads-1552754377946",
+    "storage_bucket": "saferoads-1552754377946.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253503549122:android:27d58ce8a41693ad",
+        "android_client_info": {
+          "package_name": "com.example.android.potholedetection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253503549122-t5u2rprqr8h1lot5jtoqob9ikcuf4781.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdTk8lxkC-089tEs6r_Zjzuc_BDSsBqTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253503549122-t5u2rprqr8h1lot5jtoqob9ikcuf4781.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
