@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_pick.png",
+        "source": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\src\\main\\res\\drawable-ldpi\\ic_pick.png"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\get_location.png",
+        "source": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\src\\main\\res\\drawable-ldpi\\get_location.png"
+    }
+]

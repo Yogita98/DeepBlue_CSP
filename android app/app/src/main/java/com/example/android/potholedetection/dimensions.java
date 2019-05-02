@@ -15,6 +15,8 @@ public class dimensions extends AppCompatActivity {
     float[] arraytopY;
     float[] arraysideX;
     float[] arraysideY;
+    String currentLocation;
+
     float refcm, refpxl, width1pxl, width2pxl, depth2pxl, widthincm, depthincm;
     int shoesize;
     int severity = 0;
@@ -38,7 +40,6 @@ public class dimensions extends AppCompatActivity {
         arraysideX = new float[10];
         arraysideY = new float[10];
 
-
         Button b2 = (Button) findViewById(R.id.no);
         b2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -54,6 +55,8 @@ public class dimensions extends AppCompatActivity {
         arraysideX = bundle.getFloatArray("arraysX");
         arraysideY = bundle.getFloatArray("arraysY");
         shoesize = bundle.getInt("Shoe_size");
+        currentLocation = bundle.getString("Location");
+
 
 //        Log.d("arraytopX[0]is",String.valueOf(arraytopX[0]));
 //        Log.d("arraytopX[1]is",String.valueOf(arraytopX[1]));
@@ -171,6 +174,8 @@ public class dimensions extends AppCompatActivity {
                 bundle.putFloat("Depth",depthincm);
                 bundle.putInt("Shoesize",shoesize);
                 bundle.putInt("Severity", finalSeverity);
+                bundle.putString("Location", currentLocation);
+
                 in.putExtras(bundle);
                 startActivity(in);
                 //startActivity(new Intent(dimensions.this, issue.class));

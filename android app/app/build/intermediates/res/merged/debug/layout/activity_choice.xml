@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.potholedetection.choice">
+
+    <Button
+        android:id="@+id/inappcamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="188dp"
+        android:background="@color/colorPrimary"
+        android:text="Take picture via camera"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="250dp"
+        android:layout_height="115dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="   Upload pictures"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#D81B60"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <Button
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:background="@color/colorPrimary"
+        android:text="  Select from gallery  " />
+
+</RelativeLayout>

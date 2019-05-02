@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\600646dffbf1b3371a3e854d4f6f60a2\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\600646dffbf1b3371a3e854d4f6f60a2\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\600646dffbf1b3371a3e854d4f6f60a2\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\600646dffbf1b3371a3e854d4f6f60a2\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]

@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.example.android.potholedetection"
         minSdkVersion 23
@@ -9,10 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        resValue "string", "google_maps_key", (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
-
+        multiDexEnabled true
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -28,7 +27,11 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation "com.google.firebase:firebase-auth:16.0.1"
+
 
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
@@ -39,6 +42,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
-    implementation 'com.google.android.gms:play-services:11.2.0'
-    testCompile 'junit:junit:4.12'
 }
+
+apply plugin: 'com.google.gms.google-services'

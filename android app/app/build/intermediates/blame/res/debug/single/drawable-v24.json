@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24\\logo.png",
+        "source": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\src\\main\\res\\drawable-v24\\logo.png"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24\\tick.jpg",
+        "source": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\src\\main\\res\\drawable-v24\\tick.jpg"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24\\buttondes.xml",
+        "source": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\src\\main\\res\\drawable-v24\\buttondes.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24\\ic_launcher_foreground.xml",
+        "source": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    }
+]

@@ -1,0 +1,4 @@
+#Sun Apr 21 22:19:07 IST 2019
+base.0=K\:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+path.0=classes.dex
+renamed.0=classes.dex

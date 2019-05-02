@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\0fd6f40ed0314cd01aa37acbdf446d85\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\0fd6f40ed0314cd01aa37acbdf446d85\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_enter.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\tooltip_enter.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\mytransition.xml",
+        "source": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\src\\main\\res\\anim\\mytransition.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\tooltip_exit.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\tooltip_exit.xml"
+    },
+    {
+        "merged": "K:\\AndroidStudioProjects\\SafeRoads_Firebase_Loc\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Shefali\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\24f861b234cdd02ddb9205c2f8838951\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    }
+]

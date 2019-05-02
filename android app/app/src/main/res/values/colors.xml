@@ -22,4 +22,11 @@
     <color name="base">#AAAAAA</color>
     <color name="iron">#CCCCCC</color>
     <color name="white">#FFFFFF</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="proceed_disable">#DEDEDE</color>
+    <color name="proceed_enable">#0691b8</color>
+    <color name="colorWhite">#FFFFFF</color>
+
 </resources>

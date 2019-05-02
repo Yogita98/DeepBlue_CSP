@@ -10,6 +10,7 @@ public class issue extends AppCompatActivity {
 
     int shoesize, severity;
     float widthincm,depthincm;
+    String currentLocation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,8 @@ public class issue extends AppCompatActivity {
         severity = bundle.getInt("Severity");
         widthincm = bundle.getFloat("Width");
         depthincm = bundle.getFloat("Depth");
+        currentLocation = bundle.getString("Location");
+
 
         Button b1 = (Button) findViewById(R.id.details);
         b1.setOnClickListener(new View.OnClickListener(){
@@ -30,6 +33,7 @@ public class issue extends AppCompatActivity {
                 bundle.putFloat("Depth",depthincm);
                 bundle.putInt("Shoesize",shoesize);
                 bundle.putInt("Severity", severity);
+                bundle.putString("Location", currentLocation);
                 in.putExtras(bundle);
                 startActivity(in);
             }
